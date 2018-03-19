@@ -1,0 +1,18 @@
+Package: compsizer
+Type: Package
+Title: Compute CompetitorSize, as defined in Jakab (2018)
+Version: 0.1.0
+Author: László Jakab
+Maintainer: László Jakab <laszlo.jakab@chicagobooth.edu>
+Description: This package contains utilities for computing CompetitorSize, as defined in Jakab (2018). The workhorse function `GenCompSize` eats a data.table (or data.frame) of portfolio weights and a data.table (or data.frame) of fund sizes, and spits out a neatly formatted CompetitorSize dataset. Input datasets should be supplied in long format. For now, the only measure for gaging the similarity across funds is cosine similarity, but I plan to add flexibility in the future.
+License: MIT
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    data.table (>= 1.10.4.3),
+    pbapply
+Depends:
+    data.table (>= 1.10.4.3)
+Suggests:
+    zoo
+RoxygenNote: 6.0.1
