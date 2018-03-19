@@ -35,11 +35,9 @@ pw <- data.table(
   permno = paste0("stock", rep(1:25, 4)),
   w      = runif(100))
 pw[, w := w / sum(w), by = .(wficn, date)]
-pw
 size <- data.table(
   wficn = paste0("fund", rep(1:2, each = 2)),
   date  = paste0("date", rep(1:2, 2)),
   fund.size = c(.1, .11, .2, .25))
-size
 GenCompSize(pw, size)
 }
