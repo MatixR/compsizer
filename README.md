@@ -1,6 +1,6 @@
 # compsizer
 
-Utilities for calculating CompetitorSize, as in Jakab (2018) "Competitor Scale and Mutual Fund Behavior." 
+Package for calculating CompetitorSize, as in Jakab (2018) "Competitor Scale and Mutual Fund Behavior." 
 
 #### `GenCompSize`
 
