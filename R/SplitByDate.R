@@ -12,6 +12,8 @@
 #'
 #' @export
 #'
+#' @import data.table
+#' 
 #' @examples
 #' pw <- data.table(
 #'   wficn  = paste0("fund", rep(1:2, each = 50)),
