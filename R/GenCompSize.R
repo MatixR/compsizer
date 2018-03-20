@@ -13,7 +13,7 @@
 #' @export
 #'
 #' @import data.table
-#' @importFrom pbapply pblapply
+#' @importFrom pbapply pblapply pboptions
 #" 
 #' @examples
 #' pw <- data.table(
@@ -57,6 +57,7 @@ GenCompSize <- function(pw, size,
 
   # calculate CompetitorSize
   print("Calculating cosine similarities and CompetitorSize (takes a few min)")
+  pboptions(char = "=")
   cs.list <- pblapply(csl, MainFn)
 
   # tidy up output
