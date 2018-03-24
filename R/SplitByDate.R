@@ -13,7 +13,7 @@
 #' @export
 #'
 #' @import data.table
-#' 
+#'
 #' @examples
 #' pw <- data.table(
 #'   wficn  = paste0("fund", rep(1:2, each = 50)),
@@ -56,7 +56,7 @@ SplitByDate <- function(pw, size,
   }
   # make sure fund.id, date.id, available in sizes
   if (any(!c(fund.id, date.id, size.var) %in% names(size))) {
-    stop("Fund and date variables must be present in size")
+    stop("Fund and date, and size variables must be present in size")
   }
 
   # check for missing values
@@ -131,7 +131,7 @@ SplitByDate <- function(pw, size,
 
   # loop over dates
   i.list <- seq_along(names(pw.list))
-  pb <- txtProgressBar(min = 0, max = length(i.list), style = 3)
+  pb <- txtProgressBar(max = length(i.list), style = 3)
   for (i in i.list) {
 
     # reshape portfolio weights to wide
